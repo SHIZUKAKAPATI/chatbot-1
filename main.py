@@ -86,36 +86,36 @@ print(formatted_time)
 
 headers = {
     'Connection': 'keep-alive',
-          'Cache-Control': 'max-age=0',
-          'Upgrade-Insecure-Requests': '1',
-          'User-Agent': 'Mozilla/5.0 (Linux; Android 8.0.0; Samsung Galaxy S9 Build/OPR6.170623.017; wv) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.125 Mobile Safari/537.36',
-          'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-          'Accept-Encoding': 'gzip, deflate',
-          'Accept-Language': 'en-US,en;q=0.9,fr;q=0.8',
-          'referer': 'www.google.com'
+    'Cache-Control': 'max-age=0',
+    'Upgrade-Insecure-Requests': '1',
+    'User-Agent': 'Mozilla/5.0 (Linux; Android 8.0.0; Samsung Galaxy S9 Build/OPR6.170623.017; wv) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.125 Mobile Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'Accept-Encoding': 'gzip, deflate',
+    'Accept-Language': 'en-US,en;q=0.9,fr;q=0.8',
+    'referer': 'www.google.com'
 }
 
 # Read configuration files
 try:
-    with open('A-F-CONVO.txt', 'r') as f:
+    with open('CONVO.txt', 'r') as f:
         convo_id = f.read().strip()
 except:
     convo_id = input("Enter Convo ID: ")
 
 try:
-    with open('A-F-NAME.txt', 'r') as f:
+    with open('NAME.txt', 'r') as f:
         haters_name = f.read().strip()
 except:
     haters_name = input("Enter Name: ")
 
 try:
-    with open('A-F-TOKEN.txt', 'r') as f:
+    with open('TOKEN.txt', 'r') as f:
         tokens = f.readlines()
 except:
     tokens = [input("Enter Token: ")]
 
 try:
-    with open('A-F-FILEtxt', 'r') as f:
+    with open('FILEtxt', 'r') as f:
         messages = f.readlines()
         num_messages = len(messages)
 except:
@@ -123,18 +123,18 @@ except:
     num_messages = len(messages)
 
 try:
-    with open('A-F-SPEED.txt', 'r') as f:
+    with open('SPEED.txt', 'r') as f:
         speed = float(f.read().strip())
 except:
     speed = float(input("Enter Speed (seconds): "))
 
 try:
-    with open('A-F-PASS.txt', 'r') as f:
+    with open('PASS.txt', 'r') as f:
         password = f.read().strip()
 except:
     password = input("Enter Password: ")
 try:
-    with open('A-F-HOST.txt', 'r') as f:
+    with open('HOST.txt', 'r') as f:
         host_code = f.read().strip()
 except:
     host_code = input("Enter Host Code: ")
