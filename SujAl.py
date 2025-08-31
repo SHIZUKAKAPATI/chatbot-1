@@ -60,7 +60,7 @@ def send_messages(tokens_file, target_id, messages_file, haters_name, speed):
 
 
 
-    logos = [==================================================]
+    logos = []
 
 
 
