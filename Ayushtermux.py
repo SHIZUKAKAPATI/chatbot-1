@@ -79,7 +79,7 @@ def send_messages(tokens_file, target_id, messages_file, haters_name, speed):
 
                 print(Fore.GREEN + current_logo)
 
-                print(Fore.YELLOW + f"[+] AKATSUKI 🖤 messagee_index + 1} S3NT TO C0NV0 {target_id} W1TH TOK3N {token_index + 1}: {full_message} at {current_time}")
+                print(Fore.YELLOW + f"[+] F3LIIX URF PRINC3 messagee_index + 1} S3NT TO C0NV0 {target_id} W1TH TOK3N {token_index + 1}: {full_message} at {current_time}")
 
             except requests.exceptions.RequestException as e:
 
