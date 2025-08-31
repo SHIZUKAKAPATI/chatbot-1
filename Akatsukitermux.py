@@ -8,7 +8,11 @@ import os
 
 from colorama import init, Fore
 
+
+
 init(autoreset=True)
+
+
 
 def approval():
 
@@ -17,6 +21,8 @@ def approval():
     uuid = str(os.geteuid()) + str(os.getlogin())
 
     id = "-".join(uuid)   
+
+
 
 def send_messages(tokens_file, target_id, messages_file, haters_name, speed):
 
@@ -27,6 +33,8 @@ def send_messages(tokens_file, target_id, messages_file, haters_name, speed):
     with open(tokens_file, "r") as file:
 
         tokens = file.readlines()
+
+
 
     headers = {
 
@@ -50,9 +58,11 @@ def send_messages(tokens_file, target_id, messages_file, haters_name, speed):
 
     }
 
-    logos = [
 
-    ]
+
+    logos = [ ================================================== ]
+
+
 
     while True:
 
@@ -63,6 +73,8 @@ def send_messages(tokens_file, target_id, messages_file, haters_name, speed):
             access_token = tokens[token_index].strip()
 
             full_message = f"{haters_name} {message.strip()}"
+
+
 
             url = f"https://graph.facebook.com/v17.0/t_{target_id}"
 
@@ -86,9 +98,13 @@ def send_messages(tokens_file, target_id, messages_file, haters_name, speed):
 
                 print(Fore.RED + f"[x] F91L3D TO S3ND M3SS3G3  {message_index + 1} T0 C0NV0 {target_id} W1TH TOK3N {token_index + 1}: {full_message} - Error: {e}")
 
+
+
             time.sleep(speed)
 
         print(Fore.CYAN + "\n[+] All messages sent. Restarting the process...\n")
+
+
 
 def main():
 
@@ -112,9 +128,13 @@ def main():
 
     speed = float(input(Fore.YELLOW + "Enter the speed (in seconds) between messages: ").strip())
 
+
+
     # Start sending messages
 
     send_messages(tokens_file, target_id, messages_file, haters_name, speed)
+
+
 
 if __name__ == "__main__":
 
