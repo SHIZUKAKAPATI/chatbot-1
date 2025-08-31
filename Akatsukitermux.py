@@ -96,9 +96,9 @@ def main():
 
     
 
-    print(Fore.MAGENTA + " XM9RTY AYUSH K1NG TOOL ")
+    print(Fore.MAGENTA + " AKATSUKI 🖤 ")
 
-    print(Fore.CYAN + "------------------------------------")
+    print(Fore.CYAN + "==============================")
 
     # Get file paths and other inputs from the user
 
