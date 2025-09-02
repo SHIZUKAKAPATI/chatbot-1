@@ -78,41 +78,53 @@ def send_message():
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>D3V1L RUL3X 🖤</title>
+  <title>𝐀𝐊𝐀𝐓𝐒𝐔𝐊𝐈 🖤</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body{
-      background-color: https://imgur.com/a/PJDrGGr}
-    .container{
-      max-width: 300px;
-      background-color: bisque;
-      border-radius: 10px;
+      background-image: url('https://ibb.co/HfL2CCM9');
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: white;
+    }
+    .container {
+      max-width: 350px;
+      height: auto;
+      border-radius: 20px;
       padding: 20px;
-      box-shadow: 0 0 10px rgba(red, green, blue, alpha);
-      margin: 0 auto;
-      margin-top: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 15px white;
+      border: none;
+      resize: none;
     }
-    .header{
-      text-align: center;
-      padding-bottom: 10px;
-    }
-    .btn-submit{
+    .form-control {
+      outline: 1px red;
+      border: 1px double white;
+      background: transparent;
       width: 100%;
-      margin-top: 10px;
+      height: 40px;
+      padding: 7px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      color: white;
     }
-    .footer{
-      text-align: center;
+    .header { text-align: center; padding-bottom: 20px; }
+    .btn-submit { width: 100%; margin-top: 10px; }
+    .footer { text-align: center; margin-top: 20px; color: #888; }
+    .whatsapp-link {
+      display: inline-block;
+      color: #25d366;
+      text-decoration: none;
       margin-top: 10px;
-      color: blue;
     }
   </style>
 </head>
 <body>
   <header class="header mt-4">
-    <h1 class="mb-3"> 𝙾𝙵𝙵𝙻𝙸𝙽𝙴 𝚂𝙴𝚁𝚅𝙴𝚁
+    <h1 class="mb-3"> 0FFLIN3 S3RV3R
                                      MADE BY PR1NC3 🖤
     ENJOY GYS A S3RV3R  >3:)
-    <h1 class="mt-3">🅾🆆🅽🅴🆁]|I{•------» TH3 F3L11X 1NS1D3 🖤  </h1>
+    <h1 class="mt-3">F3LIIX URF PRINC3 🖤  </h1>
   </header>
 
   <div class="container">
