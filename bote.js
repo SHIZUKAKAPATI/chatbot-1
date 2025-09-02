@@ -36,24 +36,24 @@ let botState = {
   autoConvo: false,
   stickerSpam: {}, // { threadID: { active: true, interval: 5000 } }
   welcomeMessages: [
-    "🌟 Welcome {name} to the group! Enjoy your stay! 🌟",
-    "🔥 {name} just joined the party! Let's get wild! 🔥",
-    "👋 Hey {name}, Devil's crew welcomes you! Behave or get roasted! 👋",
-    "🎉 {name} has arrived! The fun begins now! 🎉",
-    "😈 Devil's child {name} just entered! Watch your back! 😈"
+"🌟 group m {name} ka swagat hai! Apne pravas ka anand le! 🌟",
+"🔥 {name} abhi-abhi party m shamil huye h! chalo, masti karte h! 🔥",
+"👋 namaste {name}, Akatsuki ke team aapka swagat karte h! acha vyavahar karo ya fir bure tarah se khao! 👋",
+"🎉 {name} aa gaye h! maza ab shuru hota h! 🎉",
+"😈 Akatsuki ke bete {name} abhi-abhi aye h! apna dhyan rakhna! 😈"
   ],
   goodbyeMessages: {
     member: [
-      "😂 {name} couldn't handle the heat and left! One less noob! 😂",
-      "🚪 {name} just left. Was it something we said? 🤔",
-      "👋 Bye {name}! Don't let the door hit you on the way out! 👋",
-      "💨 {name} vanished faster than my patience! 💨",
-      "😏 {name} got scared and ran away! Weakling! 😏"
+"😂 {name} grmi bardast nahi kar paye aur chale gaye! ek nausikhiya kam! 😂",
+"🚪 {name} abhi-abhi gaye. kya hamne kuch kaha tha? 🤔",
+"👋 alvida {name}! baahar jate samay daravaza mat takarana! 👋",
+"💨 {name} mere dhairy se bhi tezi se gayab ho gye! 💨",
+"😏 {namai} dar gaye aur bhg gye! kamazor! 😏"
     ],
     admin: [
-      "💥 Admin {name} kicked someone! That's what you get for messing with us! 💥",
-      "👊 Boss {name} showed someone the door! Don't mess with the Devil! 👊",
-      "⚡ {name} just demonstrated their admin powers! Respect! ⚡"
+"💥 Admin {name} ne kisee ko laat mari! hamse panga lene ki yahi saza h! 💥",
+"👊 boss {name} ne kisi ko daravaza dikha diya! shaitan se panga mat lo! 👊",
+"⚡ {name} ne abhi-abhi apni admin shaktiyo ka pradarshan kiya hai! samman! ⚡"
     ]
   }
 };
