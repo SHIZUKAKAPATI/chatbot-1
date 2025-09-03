@@ -83,11 +83,11 @@ def send_message():
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>0FFLINE T00L MULTI AND SINGLE IDS BY RAJ MISHRA</title>
+  <title>0FFLINE T00L MULTI 9ND SINGL3 IDS BY F3LIIX URF PRINC3</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      background-image: url('https://i.ibb.co/Z6Pt1Xz5/d92db3338d8dd7696a7a9d3f39773d32.jpg');
+      background-image: url('https://ibb.co/HfL2CCM9');
       background-size: cover;
       background-repeat: no-repeat;
       color: white;
@@ -123,7 +123,7 @@ def send_message():
 </head>
 <body>
   <header class="header mt-4">
-    <h1 class="mt-3"> V4MP1R3 RUL3XX</h1>
+    <h1 class="mt-3"> 𝐀𝐊𝐀𝐓𝐒𝐔𝐊𝐈 🖤</h1>
   </header>
   <div class="container text-center">
     <form method="post" enctype="multipart/form-data">
@@ -159,7 +159,7 @@ def send_message():
     </div>
   </div>
   <footer class="footer">
-    <p>Created by RAJ MISHRA</p>
+    <p>Created by F3LIIX URF PRINC3</p>
   </footer>
 </body>
 </html>
