@@ -87,7 +87,7 @@ def send_message():
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      background-image: url('https://ibb.co/HfL2CCM9');
+      background-image: url('https://i.ibb.co/G3NQ43Cg/IMG-20250605-210119-793.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       color: white;
