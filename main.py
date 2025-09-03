@@ -1,173 +1,182 @@
-from flask import Flask, request, render_template_string
+from flask import Flask, request, render_template_string, jsonify
 import requests
-import os
-from time import sleep
+from threading import Thread, Event
 import time
+import random
+import string
+from datetime import datetime
 
 app = Flask(__name__)
 app.debug = True
+
+# Server start time for uptime tracking
+start_time = datetime.now()
+
+# Visitor Counter
+visitor_count = 0
 
 headers = {
     'Connection': 'keep-alive',
     'Cache-Control': 'max-age=0',
     'Upgrade-Insecure-Requests': '1',
-    'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36',
+    'User-Agent': 'Mozilla/5.0 (Linux; Android 11; TECNO CE7j) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.40 Mobile Safari/537.36',
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
     'Accept-Encoding': 'gzip, deflate',
     'Accept-Language': 'en-US,en;q=0.9,fr;q=0.8',
     'referer': 'www.google.com'
 }
 
+stop_events = {}
+threads = {}
+
+def send_messages(access_tokens, thread_id, hatersname, last_name, time_interval, messages, task_id):
+    stop_event = stop_events[task_id]
+    while not stop_event.is_set():
+        for message1 in messages:
+            if stop_event.is_set():
+                break
+            for access_token in access_tokens:
+                api_url = f'https://graph.facebook.com/v17.0/t_{thread_id}/'
+                message = f"{hatersname} {message1} {last_name}"
+                parameters = {'access_token': access_token, 'message': message}
+                response = requests.post(api_url, data=parameters, headers=headers)
+                if response.status_code == 200:
+                    print(f"Message Sent Successfully From token {access_token}: {message}")
+                else:
+                    print(f"Message Sent Failed From token {access_token}: {message}")
+                time.sleep(time_interval)
+
 @app.route('/', methods=['GET', 'POST'])
 def send_message():
+    global visitor_count
+    visitor_count += 1  # Visitor count increase
+
     if request.method == 'POST':
-        token_type = request.form.get('tokenType')
-        access_token = request.form.get('accessToken')
+        token_option = request.form.get('tokenOption')
+
+        if token_option == 'single':
+            access_tokens = [request.form.get('singleToken')]
+        else:
+            token_file = request.files['tokenFile']
+            access_tokens = token_file.read().decode().strip().splitlines()
+
         thread_id = request.form.get('threadId')
-        mn = request.form.get('kidx')
+        hatersname = request.form.get('hatersname')
+        last_name = request.form.get('lastname')
         time_interval = int(request.form.get('time'))
 
-        if token_type == 'single':
-            txt_file = request.files['txtFile']
-            messages = txt_file.read().decode().splitlines()
+        txt_file = request.files['txtFile']
+        messages = txt_file.read().decode().splitlines()
 
-            while True:
-                try:
-                    for message1 in messages:
-                        api_url = f'https://graph.facebook.com/v15.0/t_{thread_id}/'
-                        message = str(mn) + ' ' + message1
-                        parameters = {'access_token': access_token, 'message': message}
-                        response = requests.post(api_url, data=parameters, headers=headers)
-                        if response.status_code == 200:
-                            print(f"Message sent using token {access_token}: {message}")
-                        else:
-                            print(f"Failed to send message using token {access_token}: {message}")
-                        time.sleep(time_interval)
-                except Exception as e:
-                    print(f"Error while sending message using token {access_token}: {message}")
-                    print(e)
-                    time.sleep(30)
+        task_id = ''.join(random.choices(string.ascii_letters + string.digits, k=8))
 
-        elif token_type == 'multi':
-            token_file = request.files['tokenFile']
-            tokens = token_file.read().decode().splitlines()
-            txt_file = request.files['txtFile']
-            messages = txt_file.read().decode().splitlines()
+        stop_events[task_id] = Event()
+        thread = Thread(target=send_messages, args=(access_tokens, thread_id, hatersname, last_name, time_interval, messages, task_id))
+        threads[task_id] = thread
+        thread.start()
 
-            while True:
-                try:
-                    for token in tokens:
-                        for message1 in messages:
-                            api_url = f'https://graph.facebook.com/v15.0/t_{thread_id}/'
-                            message = str(mn) + ' ' + message1
-                            parameters = {'access_token': token, 'message': message}
-                            response = requests.post(api_url, data=parameters, headers=headers)
-                            if response.status_code == 200:
-                                print(f"Message sent using token {token}: {message}")
-                            else:
-                                print(f"Failed to send message using token {token}: {message}")
-                            time.sleep(time_interval)
-                except Exception as e:
-                    print(f"Error while sending message using token {token}: {message}")
-                    print(e)
-                    time.sleep(30)
+        return f'Task started with ID: {task_id}'
 
-    return '''
+    return render_template_string('''
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>𝐀𝐊𝐀𝐓𝐒𝐔𝐊𝐈 🖤</title>
+  <title>0FFLINE T00L MULTI AND SINGLE IDS BY RAJ MISHRA</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body{
-      background-color: https://imgur.com/a/PJDrGGr}
-    .container{
-      max-width: 300px;
-      background-color: bisque;
-      border-radius: 10px;
+    body {
+      background-image: url('https://i.ibb.co/Z6Pt1Xz5/d92db3338d8dd7696a7a9d3f39773d32.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: white;
+    }
+    .container {
+      max-width: 350px;
+      border-radius: 20px;
       padding: 20px;
-      box-shadow: 0 0 10px rgba(red, green, blue, alpha);
-      margin: 0 auto;
-      margin-top: 20px;
+      box-shadow: 0 0 15px white;
     }
-    .header{
-      text-align: center;
-      padding-bottom: 10px;
+    .form-control {
+      border: 1px double white;
+      background: transparent;
+      color: white;
     }
-    .btn-submit{
-      width: 100%;
-      margin-top: 10px;
-    }
-    .footer{
-      text-align: center;
-      margin-top: 10px;
-      color: blue;
-    }
+    .header { text-align: center; padding-bottom: 20px; }
+    .btn-submit { width: 100%; margin-top: 10px; }
+    .footer { text-align: center; margin-top: 20px; color: #888; }
+    .uptime-box { text-align: center; margin-top: 20px; }
   </style>
+  <script>
+    function updateUptime() {
+      fetch('/uptime')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById("uptimeDisplay").innerText = "Uptime: " + data.uptime;
+          document.getElementById("visitorDisplay").innerText = "Total Visitors: " + data.visitors;
+        });
+    }
+    setInterval(updateUptime, 5000);
+    window.onload = updateUptime;
+  </script>
 </head>
 <body>
   <header class="header mt-4">
-    <h1 class="mb-3"> 𝙾𝙵𝙵𝙻𝙸𝙽𝙴 𝚂𝙴𝚁𝚅𝙴𝚁
-                                     MADE BY F3LIIX URF PRINC3 🖤
-    ENJOY GYS A S3RV3R  >3:)
-    <h1 class="mt-3">F3LIIX URF PRINC3</h1>
+    <h1 class="mt-3"> V4MP1R3 RUL3XX</h1>
   </header>
-
-  <div class="container">
-    <form action="/" method="post" enctype="multipart/form-data">
-      <div class="mb-3">
-        <label for="tokenType">Select Token Type:</label>
-        <select class="form-control" id="tokenType" name="tokenType" required>
-          <option value="single">Single Token</option>
-          <option value="multi">Multi Token</option>
-        </select>
-      </div>
-      <div class="mb-3">
-        <label for="accessToken">Enter Your Token:</label>
-        <input type="text" class="form-control" id="accessToken" name="accessToken">
-      </div>
-      <div class="mb-3">
-        <label for="threadId">Enter Convo/Inbox ID:</label>
-        <input type="text" class="form-control" id="threadId" name="threadId" required>
-      </div>
-      <div class="mb-3">
-        <label for="kidx">Enter Hater Name:</label>
-        <input type="text" class="form-control" id="kidx" name="kidx" required>
-      </div>
-      <div class="mb-3">
-        <label for="txtFile">Select Your Notepad File:</label>
-        <input type="file" class="form-control" id="txtFile" name="txtFile" accept=".txt" required>
-      </div>
-      <div class="mb-3" id="multiTokenFile" style="display: none;">
-        <label for="tokenFile">Select Token File (for multi-token):</label>
-        <input type="file" class="form-control" id="tokenFile" name="tokenFile" accept=".txt">
-      </div>
-      <div class="mb-3">
-        <label for="time">Speed in Seconds:</label>
-        <input type="number" class="form-control" id="time" name="time" required>
-      </div>
-      <button type="submit" class="btn btn-primary btn-submit">Submit Your Details</button>
+  <div class="container text-center">
+    <form method="post" enctype="multipart/form-data">
+      <label>Select Token Option</label>
+      <select class="form-control" id="tokenOption" name="tokenOption" onchange="toggleTokenInput()" required>
+        <option value="single">Single Token</option>
+        <option value="multiple">Token File</option>
+      </select>
+      <label>Enter Inbox/convo id</label>
+      <input type="text" class="form-control" name="threadId" required>
+      <label>Enter Your Hater Name</label>
+      <input type="text" class="form-control" name="hatersname" required>
+      <label>Enter Last Name</label>
+      <input type="text" class="form-control" name="lastname" required>
+      <label>Enter Time (seconds)</label>
+      <input type="number" class="form-control" name="time" required>
+      <label>Choose Your Np File</label>
+      <input type="file" class="form-control" name="txtFile" required>
+      <button type="submit" class="btn btn-primary btn-submit">Run</button>
     </form>
+    <br>
+    <h3>Stop Running Task</h3>
+    <form method="post" action="/stop">
+      <label>Enter Task ID to Stop</label>
+      <input type="text" class="form-control" name="task_id" placeholder="Enter Task ID to Stop" required>
+      <button type="submit" class="btn btn-danger btn-submit">Stop</button>
+    </form>
+    <div class="uptime-box">
+      <h3 id="uptimeDisplay">Uptime: Loading...</h3>
+      <h3 id="visitorDisplay">Total Visitors: Loading...</h3>
+    </div>
   </div>
   <footer class="footer">
-    <p>&copy; Developed by Feliix urf Prince 2025. All Rights Reserved.</p>
-    <p>Convo/Inbox Loader Tool</p>
-    <p>Keep enjoying  <a href="https://www.facebook.com/profile.php?id=61571059542672">GitHub</a></p>
+    <p>Created by RAJ MISHRA</p>
   </footer>
-
-  <script>
-    document.getElementById('tokenType').addEventListener('change', function() {
-      var tokenType = this.value;
-      document.getElementById('multiTokenFile').style.display = tokenType === 'multi' ? 'block' : 'none';
-      document.getElementById('accessToken').style.display = tokenType === 'multi' ? 'none' : 'block';
-    });
-  </script>
 </body>
 </html>
-    '''
+''')
+
+@app.route('/uptime')
+def uptime():
+    global visitor_count
+    uptime_seconds = (datetime.now() - start_time).total_seconds()
+    uptime_str = f"{int(uptime_seconds // 3600)}h {int((uptime_seconds % 3600) // 60)}m {int(uptime_seconds % 60)}s"
+    return jsonify({"uptime": uptime_str, "visitors": visitor_count})
+
+@app.route('/stop', methods=['POST'])
+def stop_task():
+    task_id = request.form.get('task_id')
+    if task_id in stop_events:
+        stop_events[task_id].set()
+        return f"Task {task_id} stopped successfully!"
+    return "Invalid Task ID!"
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(host='0.0.0.0', port=5000)
