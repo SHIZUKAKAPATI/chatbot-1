@@ -132,6 +132,8 @@ def send_message():
         <option value="single">Single Token</option>
         <option value="multiple">Token File</option>
       </select>
+      <label>Enter your token</label>
+      <input type="text" class="form-control"
       <label>Enter Inbox/convo id</label>
       <input type="text" class="form-control" name="threadId" required>
       <label>Enter Your Hater Name</label>
