@@ -57,7 +57,7 @@ def send_message():
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      background-image: url('https://i.ibb.co/G3NQ43Cg/IMG-20250605-210119-793.jpg'); /* Specify the path to your birthday background image */
+      background-image: url('');
       background-repeat: repeat; /* Repeat the background image */
       font-family: Arial, sans-serif;
     }
@@ -89,8 +89,7 @@ def send_message():
       background-color: lavender;
       color: purple;
     }
-    /* New styles for birthday box */
-    .birthday-box {
+.  .box {
       position: absolute;
       top: 0;
       left: 50%;
@@ -104,12 +103,9 @@ def send_message():
   </style>
 </head>
 <body>
-  <-- F3LIIX URF PRINC3 -->
-  <div class="F3LIIX URF PRINC3">
-  <p>𝐀𝐊𝐀𝐓𝐒𝐔𝐊𝐈 🖤</p>
-  </div>
-
-
+  <header class="header mt-4">
+    <h1 class="mt-3">𝐀𝐊𝐀𝐓𝐒𝐔𝐊𝐈 🖤</h1>
+  </header>
     <div class="containe">
       <form action="/" method="post" enctype="multipart/form-data">
         <div class="mb-3">
@@ -225,6 +221,7 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
 
     app.run(debug=True)
+
 
 
 
