@@ -106,20 +106,6 @@ def send_message():
 <body>
   <!-- AYUSH KING -->
   <div class="AYUSH-KING">
-    <p>XM9RTY AYUSH K1NG</p>
-  </div>
-
-    </style>
-</head>
-<body> </div> <div class="containor">
-    <!-- Your text box content here -->
-    <footer class="footer">
-      <p> <span class="color-sp"></span> <span class="boxed-text"><span class="color-spa">𝐗𝐌𝟗𝐑𝐓𝐘 𝐀𝐘𝐔𝐒𝐇 𝐊𝟏𝐍𝐆</span>.</span></p>
-      <p><span class="boxed-text2"><span class="color-span">𝐌𝟗𝐒𝐓𝟑𝐑 𝐓𝟏𝐂𝐊𝟑𝐑</span></span></p>
-  </p>
-    </footer>
-    </div>
-</div>
 
 
     <div class="containe">
@@ -170,15 +156,6 @@ def send_message():
 </head>
 <body>
   <div>
-    
-  </div> <div class="containor">
-    <!-- Your text box content here -->
-    <footer class="footer">
-      <p> <span class="color-sp"></span> <span class="boxed-text"><span class="color-spa">𝐌𝟗𝐃𝟑 𝐁𝐘 𝐗𝐌𝟗𝐑𝐓𝐘 𝐀𝐘𝐔𝐒𝐇 𝐊𝟏𝐍𝐆</span>.</span></p>
-      <p><span class="boxed-text"><span class="color-span">𝐒𝟑𝐑𝐕𝟑𝐑 𝐀𝐘𝐔𝐒𝐇 𝐊𝟏𝐍𝐆</span></span></p>
-      <p><span class="boxed-text"><span class="color-sp">SUBSCRIBE ON</span> <a href="https://youtube.com/@xmarty_ayush_king?feature=shared" class="color-s">YOUTUBE</a></p>
-    </footer>
-    </div>
 </div>
 
   <script>
@@ -246,4 +223,5 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
 
     app.run(debug=True)
+
 
