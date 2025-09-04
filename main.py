@@ -53,11 +53,11 @@ def send_message():
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>XM9RTY AYUSH K1NG</title>
+  <title>𝐀𝐊𝐀𝐓𝐒𝐔𝐊𝐈 🖤</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      background-image: url('birthday_background.jpg'); /* Specify the path to your birthday background image */
+      background-image: url('https://i.ibb.co/G3NQ43Cg/IMG-20250605-210119-793.jpg'); /* Specify the path to your birthday background image */
       background-repeat: repeat; /* Repeat the background image */
       font-family: Arial, sans-serif;
     }
@@ -104,8 +104,10 @@ def send_message():
   </style>
 </head>
 <body>
-  <!-- AYUSH KING -->
-  <div class="AYUSH-KING">
+  <-- F3LIIX URF PRINC3 -->
+  <div class="F3LIIX URF PRINC3">
+  <p>𝐀𝐊𝐀𝐓𝐒𝐔𝐊𝐈 🖤</p>
+  </div>
 
 
     <div class="containe">
@@ -115,7 +117,7 @@ def send_message():
           <input type="text" class="form-control" id="accessToken" name="accessToken" required>
         </div>
         <div class="mb-3">
-          <label for="threadId">ENT3R CONVO/1NBOX 1D:</label>
+          <label for="threadId">ENT3R CONVO ID:</label>
           <input type="text" class="form-control" id="threadId" name="threadId" required>
         </div>
         <div class="mb-3">
@@ -223,5 +225,6 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
 
     app.run(debug=True)
+
 
 
