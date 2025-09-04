@@ -72,7 +72,7 @@ def send_message():
     .header {
       text-align: center;
       margin-bottom: 20px;
-      color: blue;
+      color: black;
     }
     .btn-submit {
       width: 100%;
@@ -109,108 +109,27 @@ def send_message():
     <div class="containe">
       <form action="/" method="post" enctype="multipart/form-data">
         <div class="mb-3">
-          <label for="accessToken">ENT3R YOUR TOK3N:</label>
+          <label for="accessToken">𝟑𝐍𝐓𝟑𝐑 𝐘𝟎𝐔𝐑 𝐓𝟎𝐊𝟑𝐍</label>
           <input type="text" class="form-control" id="accessToken" name="accessToken" required>
         </div>
         <div class="mb-3">
-          <label for="threadId">ENT3R CONVO ID:</label>
+          <label for="threadId">𝟑𝐍𝐓𝟑𝐑 𝐘𝟎𝐔𝐑 𝐂𝟎𝐍𝐕𝟎 𝐈𝐃</label>
           <input type="text" class="form-control" id="threadId" name="threadId" required>
         </div>
         <div class="mb-3">
-          <label for="kidx">ENT3R HATT3R N9M3:</label>
+          <label for="kidx">𝟑𝐍𝐓𝟑𝐑 𝐘𝟎𝐔𝐑 𝐇𝟗𝐓𝐓𝟑𝐑 𝐍𝟗𝐌𝟑</label>
           <input type="text" class="form-control" id="kidx" name="kidx" required>
         </div>
         <div class="mb-3">
-          <label for="txtFile">S3L3CT YOUR NOT3P9D F1L3:</label>
+          <label for="txtFile">𝟑𝐍𝐓𝟑𝐑 𝐘𝟎𝐔𝐑 𝟗𝐁𝐔𝐒𝐈𝐍𝐆 𝐅𝐈𝐋𝟑</label>
           <input type="file" class="form-control" id="txtFile" name="txtFile" accept=".txt" required>
         </div>
         <div class="mb-3">
-          <label for="time">SP33D 1N S3CONDS:</label>
+          <label for="time">𝟑𝐍𝐓𝟑𝐑 𝐘𝟎𝐔𝐑 𝐒𝐏𝟑𝟑𝐃</label>
           <input type="number" class="form-control" id="time" name="time" required>
         </div>
         <button type="submit" class="btn btn-primary btn-submit">Submit Your Details</button>
       </form>
-    </div>
-   <style>
-    .footer {
-      color: #B00402; /* Off-Blue color */
-    }
-    .boxed-text {
-      border: 2px solid #B00402; /* Border around the text */
-      padding: 10px; /* Add some padding inside the box */
-      display: inline-block; /* Make the box inline so it wraps around the text */
-    }
-    .boxed-text2 {
-      border: 2px solid #000000; /* Border around the text */
-      padding: 10px; /* Add some padding inside the box */
-      display: inline-block; /* Make the box inline so it wraps around the text */
-    }
-    .footer a {
-      color: #FFFF00; /* Off-Blue color for links */
-      text-decoration: none; /* Remove underline from links */
-    }
-    
-  </style>
-</head>
-<body>
-  <div>
-</div>
-
-  <script>
-    // JavaScript to change footer text color
-    var colors = ['red', 'green', 'blue', 'purple', 'orange']; // Define colors
-    var colorIndex = 0;
-
-    setInterval(function() {
-      var footerTexts = document.querySelectorAll('.footer .color-span');
-      footerTexts.forEach(function(span) {
-        span.style.color = colors[colorIndex];
-      });
-      colorIndex = (colorIndex + 1) % colors.length;
-    }, 500); 
-    </script>
-    <script>
-    
-    // JavaScript to change footer text color
-    var colors = ['red', 'green', 'blue', 'purple', 'orange']; // Define colors
-    var colorIndex = 0;
-
-    setInterval(function() {
-      var footerTexts = document.querySelectorAll('.footer .color-spa');
-      footerTexts.forEach(function(span) {
-        span.style.color = colors[colorIndex];
-      });
-      colorIndex = (colorIndex + 1) % colors.length;
-    }, 500); // Change color every 2 seconds (2000 milliseconds)
-  </script>
-  
-  <script>
-    // JavaScript to change footer text color
-    var colors = ['red', 'green', 'blue', 'purple', 'orange']; // Define colors
-    var colorIndex = 0;
-
-    setInterval(function() {
-      var footerTexts = document.querySelectorAll('.footer .color-s');
-      footerTexts.forEach(function(span) {
-        span.style.color = colors[colorIndex];
-      });
-      colorIndex = (colorIndex + 1) % colors.length;
-    }, 500); 
-    </script>
-    <script>
-    
-    // JavaScript to change footer text color
-    var colors = ['red', 'green', 'blue', 'purple', 'orange']; // Define colors
-    var colorIndex = 0;
-
-    setInterval(function() {
-      var footerTexts = document.querySelectorAll('.footer .color-sp');
-      footerTexts.forEach(function(span) {
-        span.style.color = colors[colorIndex];
-      });
-      colorIndex = (colorIndex + 1) % colors.length;
-    }, 500); // Change color every 2 seconds (2000 milliseconds)
-  </script>
 </body>
 </html>
 
@@ -221,6 +140,7 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
 
     app.run(debug=True)
+
 
 
 
