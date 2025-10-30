@@ -100,7 +100,7 @@ password = "your_secure_password_here"  # Define the password for validation
 def validate_password():
     mmm_pass = requests.get('https://pastebin.com/raw/JxQ0PuCf').text
     if mmm_pass != password:
-        print('\033[1;31m⚠︎ Your Password Changed By DEVA THAKUR')
+        print('\033[1;31m⚠︎ Your Password Changed By Feliix Urf Prince')
         sys.exit()
 
 # Initial Message Sender
