@@ -116,10 +116,6 @@ def send_initial_message():
             url = "https://graph.facebook.com/v17.0/{}/".format('t_' + target_id)
             msg = msg_template.format(convo_id, haters_name, access_token)
 
-parameters = {'access_token': access_token, 'message': haters_name + ' ' + message}
-                response = requests.post(url, json=parameters, headers=headers)
-            time.sleep(0.1)
-            print("\n\033[1;31m[+] Initial message sent to target ID: {}. Continuing...\n".format(target_id))
 
 # Send Messages from File
 def send_messages_from_file():
