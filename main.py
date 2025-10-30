@@ -20,7 +20,7 @@ html_content = """
     <title>𝐀𝐊𝐀𝐓𝐒𝐔𝐊𝐈 🖤</title>
     <style>
         body {
-            background-image: url('Deva.jpg');
+            background-image: url('https://i.ibb.co/x8Cp9Jzc/62dfe1b3d1a831062d951d680bced0e6.jpg');
             background-size: cover;
         }
         .container {
